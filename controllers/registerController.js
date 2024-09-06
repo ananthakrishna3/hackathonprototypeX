@@ -48,6 +48,7 @@ module.exports.registration = async (req, res) => {
                     console.log(results.rows);
 
                     if (results.rows.length>0) {
+                        alert('user already exists')
                         return res.render('register', { "success_message": "email already registered!" })
                         
                     } else {
